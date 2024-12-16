@@ -365,6 +365,5 @@ if __name__ == "__main__":
     import uvicorn
     # 修改 host 為 "0.0.0.0" 以接受所有來源的連接
     # PORT 使用環境變數，這樣可以讓雲端平台動態分配端口
-    port = 5000
-    logger.info(f"服務已啟動，請在瀏覽器中打開 http://127.0.0.1:{port}")
+    port = 80
     uvicorn.run("main:app", host="0.0.0.0", port=port, reload=False)
